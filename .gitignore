@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+### The preceding lines were part of a template.
+### The following lines were added by Ashley Newton 9/26/20
+
+# Virtual environment files
+/venv
+
+# Python files
+get-pip.py
+
+# Metadata
+/metadata
