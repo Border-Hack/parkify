@@ -3,6 +3,10 @@ import styles from "./Park.module.css";
 import Aux from "./../../../hoc/Auxiliary/Auxiliary";
 
 class Park extends Component {
+  state = {
+    name: this.props.name,
+    address: this.props.address,
+  };
   render() {
     const panelClass = ["panel"];
     const btnClass = ["btn", "btn-block"];
@@ -24,7 +28,13 @@ class Park extends Component {
             <div className={styles.address}>Address: {this.props.address}</div>
           </div>
           <div className="panel-footer">
-            <button className={btnClass.join(" ")} disabled={!this.props.safe}>
+            <button
+              onClick={() =>
+                this.props.click(this.props.name, this.props.address)
+              }
+              className={btnClass.join(" ")}
+              disabled={!this.props.safe}
+            >
               {this.props.safe ? "Book" : "Not Safe"}
             </button>
           </div>
