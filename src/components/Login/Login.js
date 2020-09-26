@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Login.module.css";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   state = {
@@ -57,9 +58,9 @@ class Login extends Component {
               <div className="panel-footer">
                 <div>
                   Don't have an account?
-                  <submit className="btn btn-link">
+                  <Link to="/signup" className="btn btn-link">
                     Click here to Sign Up
-                  </submit>
+                  </Link>
                 </div>
               </div>
             </div>
