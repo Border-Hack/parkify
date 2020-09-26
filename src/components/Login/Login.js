@@ -57,7 +57,9 @@ class Login extends Component {
               <div className="panel-footer">
                 <div>
                   Don't have an account?
-                  <submit className="btn">Click here to Sign Up</submit>
+                  <submit className="btn btn-link">
+                    Click here to Sign Up
+                  </submit>
                 </div>
               </div>
             </div>
