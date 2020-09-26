@@ -16,6 +16,7 @@ class Parks extends Component {
     this.setState({ bookingOpen: true, name: name, address: address });
   };
   confirmBookHandler = (slot) => {
+    this.setState({ bookingOpen: false });
     console.log("Parked booked for", slot);
   };
   render() {
@@ -44,7 +45,7 @@ class Parks extends Component {
               click={this.onClickBookHandler}
             />
             <Park
-              safe={true}
+              safe={false}
               url={
                 "https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/07/green-park.jpg"
               }

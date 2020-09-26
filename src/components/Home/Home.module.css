@@ -4,11 +4,6 @@
   grid-template-columns: 3fr 2fr;
   padding-top: 50px;
   padding-bottom: 40px;
-  background-image: linear-gradient(
-    to right,
-    rgb(88, 63, 7),
-    rgb(255, 255, 255)
-  );
 }
 .gallery {
   display: grid;
