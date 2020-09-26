@@ -1,0 +1,19 @@
+footer {
+  position: absolute;
+  padding: 10px 0;
+  background-color: #101010;
+  color: #9d9d9d;
+  bottom: 0;
+  width: 100%;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  height:  50px;
+}
+.link li Link div{
+  margin-right: 5px;
+}
