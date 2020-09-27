@@ -13,7 +13,7 @@ class Book extends Component {
         <div className="panel panel-success">
           <div className="panel-heading">
             <center>
-              <h4>Confrim Booking</h4>
+              <h4>Confirm Booking</h4>
             </center>
           </div>
           <div className="panel-body">
@@ -26,15 +26,6 @@ class Book extends Component {
                 disabled
               />
             </div>
-            <div className="form-group">
-              <div>Address: </div>
-              <input
-                type="text"
-                className="form-control"
-                value={this.props.address}
-                disabled
-              />
-            </div>{" "}
             <div className="form-group">
               <div>Select Slot: </div>
               <select className="form-control" onChange={this.onChangeSlot}>

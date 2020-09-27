@@ -12,8 +12,8 @@ class Parks extends Component {
   bookCancelHandler = () => {
     this.setState({ bookingOpen: false });
   };
-  onClickBookHandler = (name, address) => {
-    this.setState({ bookingOpen: true, name: name, address: address });
+  onClickBookHandler = (name) => {
+    this.setState({ bookingOpen: true, name: name });
   };
   confirmBookHandler = (slot) => {
     this.setState({ bookingOpen: false });
@@ -26,11 +26,7 @@ class Parks extends Component {
           show={this.state.bookingOpen}
           modalClosed={this.bookCancelHandler}
         >
-          <Book
-            name={this.state.name}
-            address={this.state.address}
-            confirm={this.confirmBookHandler}
-          />
+          <Book name={this.state.name} confirm={this.confirmBookHandler} />
         </Modal>
         <div className={`container ${styles.parks}`}>
           <h1>Parks</h1>
@@ -41,8 +37,11 @@ class Parks extends Component {
                 "https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/07/green-park.jpg"
               }
               name="park1"
-              address="_________"
+              limit={10}
+              peopleVisited={4}
               click={this.onClickBookHandler}
+              sanitizedAt={new Date().toLocaleTimeString()}
+              safety={(6 / 10) * 100}
             />
             <Park
               safe={false}
@@ -50,8 +49,11 @@ class Parks extends Component {
                 "https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/07/green-park.jpg"
               }
               name="park2"
+              peopleVisited={8}
+              limit={15}
               click={this.onClickBookHandler}
-              address="_________"
+              sanitizedAt={new Date().toLocaleTimeString()}
+              safety={(7 / 15) * 100}
             />
             <Park
               safe={true}
@@ -59,8 +61,11 @@ class Parks extends Component {
                 "https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2019/07/green-park.jpg"
               }
               name="park3"
+              peopleVisited={1}
+              limit={4}
               click={this.onClickBookHandler}
-              address="_________"
+              sanitizedAt={new Date().toLocaleTimeString()}
+              safety={(3 / 4) * 100}
             />
           </div>
         </div>
