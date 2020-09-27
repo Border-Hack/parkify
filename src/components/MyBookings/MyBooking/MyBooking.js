@@ -3,20 +3,7 @@ import styles from "./MyBooking.module.css";
 import Aux from "./../../../hoc/Auxiliary/Auxiliary";
 
 class Park extends Component {
-  state = {
-    name: this.props.name,
-    address: this.props.address,
-  };
   render() {
-    const panelClass = ["panel"];
-    const btnClass = ["btn", "btn-block"];
-    if (this.props.safe) {
-      panelClass.push("panel-success");
-      btnClass.push("btn-success");
-    } else {
-      panelClass.push("panel-danger");
-      btnClass.push("btn-danger");
-    }
     return (
       <Aux>
         <div className={styles.park}>
